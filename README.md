@@ -5,11 +5,6 @@
 - 💻 I'm a Computer Programing
 - ⚡ I am developing myself in PHP, Web technologies.
 
-### Connect with me:
-
-[<img align="left" alt="hs-qwerty | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
-
-
 <br />
 
 ### Languages and Tools:
@@ -48,5 +43,7 @@
 
 ---
 
+📊 My Stats
 
-[linkedin]: https://www.linkedin.com/in/hicri-selviler-111536205/
+![https://github.com/anuraghazra/github-readme-stats](https://github-readme-stats.vercel.app/api?username=hs-qwerty&count_private=true&show_icons=true)
+
