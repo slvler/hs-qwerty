@@ -21,5 +21,12 @@ class ProductSeeder extends Seeder
             'price' => '49.50',
             'stock' => '50'
         ]);
+
+        Product::create([
+            'category_id' => '1',
+            'title' => 'Dress',
+            'price' => '49.50',
+            'stock' => '50'
+        ]);
     }
 }

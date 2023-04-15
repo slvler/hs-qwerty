@@ -15,14 +15,42 @@ class OrderSeeder extends Seeder
      */
     public function run()
     {
-        $quantity = "4";
-        $product_price = "49.50";
         Order::create([
             'user_id' => '1',
-            'product_id' => '1',
-            'quantity' => $quantity,
-            'product_price' => $product_price,
-            'total' => $quantity * $product_price
+            'item' => json_encode(
+               [
+                   [
+                       'product_id' => "1",
+                       'quantity' => "2",
+                       'product_price' => "50",
+                       'total' => "100",
+                   ]
+               ]
+            ),
+            'total' => "100"
         ]);
+
+        Order::create([
+            'user_id' => '1',
+            'item' => json_encode(
+                [
+                    [
+                    'product_id' => "1",
+                    'quantity' => "2",
+                    'product_price' => "50",
+                    'total' => "100",
+                    ],
+                    [
+                    'product_id' => "2",
+                    'quantity' => "2",
+                    'product_price' => "50",
+                    'total' => "100",
+                    ],
+                ]
+            ),
+            'total' => "200"
+        ]);
+
+
     }
 }

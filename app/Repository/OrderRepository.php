@@ -23,7 +23,7 @@ class OrderRepository implements OrderRepositoryInterface
 
     public function store($data)
     {
-        $data['total'] = $data['quantity'] * $data['product_price'];
+        $data['item'] = json_encode($data['item']);
         return $this->order->create($data);
     }
 

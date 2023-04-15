@@ -44,5 +44,5 @@ Route::put('/product/update/{id}', [ProductController::class, 'update']);
 Route::delete('/product/destroy', [ProductController::class, 'destroy']);
 
 Route::get('/orders', [OrderController::class, 'index']);
-Route::post('/order/store', [OrderController::class, 'store'])->middleware('product.stock');
+Route::post('/order/store', [OrderController::class, 'store']);
 Route::delete('/order/destroy', [OrderController::class, 'destroy']);

@@ -21,8 +21,10 @@ class OrderController extends Controller
 
     public function store(Request $request)
     {
-        $order = $this->orderService->store($request->only('user_id','product_id','quantity','product_price'));
-        return Response::store(['id' => $order->id], 'Order Successful');
+        $order =  $this->orderService->store($request->all());
+        return $order
+            ? Response::store(['id' => $order->id], 'Order Successful')
+            : Response::stockFail('Validation Fail');
     }
 
     public function destroy(Request $request): JsonResponse
