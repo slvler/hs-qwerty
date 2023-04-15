@@ -37,4 +37,7 @@ Route::delete('/categories/destroy', [CategoryController::class, 'destroy']);
 
 
 Route::get('/products', [ProductController::class, 'index']);
-Route::post('/product/store', [ProductController::class, 'store']);
+Route::post('/products/store', [ProductController::class, 'store']);
+Route::get('/product/show/{id}', [ProductController::class, 'show']);
+Route::put('/product/update/{id}', [ProductController::class, 'update']);
+Route::delete('/product/destroy', [ProductController::class, 'destroy']);

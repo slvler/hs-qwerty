@@ -10,5 +10,10 @@ class Product extends Model
 {
     use HasFactory, Sluggable;
 
-    protected $fillable = ['category_id','title','slug'];
+    protected $fillable = ['category_id','title','stock','slug'];
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }

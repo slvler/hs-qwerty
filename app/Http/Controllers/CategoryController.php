@@ -49,7 +49,4 @@ class CategoryController extends Controller
             ? Response::destroy(['id' => $request->id], 'Category Deleted')
             : Response::notRecord('Category Not Record');
     }
-
-
-
 }

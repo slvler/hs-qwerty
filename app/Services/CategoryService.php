@@ -29,7 +29,6 @@ class CategoryService
     {
         return $this->categoryRepository->update($id, $data);
     }
-
     public function destroy($id)
     {
         return $this->categoryRepository->destroy($id);
