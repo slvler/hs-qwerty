@@ -22,7 +22,7 @@ class ProductController extends Controller
 
     public function store(Request $request)
     {
-        $product = $this->productService->store($request->only('category_id','title','stock'));
+        $product = $this->productService->store($request->only('category_id','title','price','stock'));
         return Response::store(['id' => $product->id], 'Product Successful');
     }
 
@@ -47,7 +47,7 @@ class ProductController extends Controller
         $product = $this->productService->destroy($request->only('id'));
         return $product
             ? Response::destroy(['id' => $request->id], 'Product Deleted')
-            : Response::notRecord('Category Not Record');
+            : Response::notRecord('Product Not Record');
     }
 
 }

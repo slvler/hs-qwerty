@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
@@ -41,3 +42,7 @@ Route::post('/products/store', [ProductController::class, 'store']);
 Route::get('/product/show/{id}', [ProductController::class, 'show']);
 Route::put('/product/update/{id}', [ProductController::class, 'update']);
 Route::delete('/product/destroy', [ProductController::class, 'destroy']);
+
+Route::get('/orders', [OrderController::class, 'index']);
+Route::post('/order/store', [OrderController::class, 'store'])->middleware('product.stock');
+Route::delete('/order/destroy', [OrderController::class, 'destroy']);

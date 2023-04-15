@@ -18,6 +18,7 @@ class ProductSeeder extends Seeder
         Product::create([
             'category_id' => '1',
             'title' => 'Converse',
+            'price' => '49.50',
             'stock' => '50'
         ]);
     }

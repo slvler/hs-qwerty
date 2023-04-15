@@ -27,6 +27,11 @@ class Response
         return self::result(404, $message, $parameters);
     }
 
+    public static function stockFail($message = null, array $parameters = []): JsonResponse
+    {
+        return self::result(404, $message, $parameters);
+    }
+
     public static function result($statusCode = 200, $message, $data = null): JsonResponse
     {
         return response()->json([
