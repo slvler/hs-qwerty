@@ -22,7 +22,7 @@ class CategoryController extends Controller
 
     public function store(CategoryStoreRequest $request): JsonResponse
     {
-        $category = $this->categoryService->store($request->only('title'));
+        $category = $this->categoryService->store($request->only('parent','title'));
         return Response::store(['id' => $category->id], 'Category Successful');
     }
 

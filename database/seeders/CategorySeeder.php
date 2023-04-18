@@ -16,15 +16,19 @@ class CategorySeeder extends Seeder
     public function run()
     {
         Category::create([
+            'parent' => '0',
             'title' => 'Shoe'
         ]);
         Category::create([
+            'parent' => '0',
             'title' => 'Clothes'
         ]);
         Category::create([
+            'parent' => '0',
             'title' => 'Shirt'
         ]);
         Category::create([
+            'parent' => '0',
             'title' => 'Sweater'
         ]);
     }

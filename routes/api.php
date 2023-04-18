@@ -3,6 +3,7 @@
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SubCategoryController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -46,3 +47,7 @@ Route::delete('/product/destroy', [ProductController::class, 'destroy']);
 Route::get('/orders', [OrderController::class, 'index']);
 Route::post('/order/store', [OrderController::class, 'store']);
 Route::delete('/order/destroy', [OrderController::class, 'destroy']);
+
+
+Route::get('/subcategories/{id}', [SubCategoryController::class, 'index']);
+Route::post('/subcategories/store', [SubCategoryController::class, 'store']);

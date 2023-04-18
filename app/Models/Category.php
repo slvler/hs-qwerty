@@ -10,5 +10,10 @@ class Category extends Model
 {
     use HasFactory, Sluggable;
 
-    protected $fillable = ['title','slug'];
+    protected $fillable = ['parent','title','slug'];
+
+    public function getCategory()
+    {
+        return $this->belongsTo(Category::class,'parent');
+    }
 }

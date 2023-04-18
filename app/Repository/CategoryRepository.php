@@ -2,6 +2,7 @@
 
 namespace App\Repository;
 
+use App\DataObjects\SubCategoryDataObject;
 use App\Models\Category;
 
 class CategoryRepository implements CategoryRepositoryInterface
@@ -43,5 +44,22 @@ class CategoryRepository implements CategoryRepositoryInterface
         $category = $this->getById($id);
         return $category->delete();
     }
+
+
+    public function getCategoryByAll($id)
+    {
+        return $this->category
+            ->where('parent','=',$id)
+            ->get();
+    }
+
+    public function subCategoryStore(SubCategoryDataObject $data)
+    {
+        return $this->category->create([
+            'parent' => $data->getParent(),
+            'title' => $data->getTitle()
+        ]);
+    }
+
 
 }
