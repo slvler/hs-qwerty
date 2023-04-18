@@ -22,9 +22,7 @@ class SubCategoryController extends Controller
 
     public function store(SubCategoryStoreRequest $request)
     {
-      
         $subCategory = $this->subCategoryService->store($request->validated());
-        dd($subCategory);
         return Response::store(['id' => $subCategory->id], 'SubCategory Successful');
     }
 
