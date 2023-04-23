@@ -1,6 +1,9 @@
-### installation 
+## Installation
 
-- bash install.sh
+Run the command via bash terminal
+```bash
+     bash install.sh
+```
 
 # mysql connection
 - user: laravel
