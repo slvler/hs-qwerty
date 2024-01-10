@@ -24,6 +24,13 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
+Route::group(['middleware' => 'api' ], function ($router) {
+    Route::post('/login',[\App\Http\Controllers\Auth\LoginController::class, 'login']);
+    Route::post('/register',[\App\Http\Controllers\Auth\RegisterController::class, 'check']);
+    Route::post('/refresh',[\App\Http\Controllers\Auth\LogoutController::class, 'refresh']);
+
+});
+
 Route::get('/users', [UserController::class, 'index']);
 Route::post('/users/store', [UserController::class, 'store']);
 Route::get('/users/show/{id}', [UserController::class, 'show']);
