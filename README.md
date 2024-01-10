@@ -21,9 +21,3 @@
 
 ## postman collection
 - laravel-example.postman_collection.json
-
-Client ID: 1
-Client secret: iUkosC7jbbjcMaLMgQOYm7DxxaagfLXsg3B8D3Id
-Password grant client created successfully.
-Client ID: 2
-Client secret: 9S1j3vL3ao9GJxvjYIzgXf7QXIQ6Hbz2KTMiW0SH
